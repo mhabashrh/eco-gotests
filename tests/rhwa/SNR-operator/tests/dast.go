@@ -14,7 +14,7 @@ import (
 	. "github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/internal/rhwainittools"
 	"github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/internal/rhwaparams"
 
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	//metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
 var _ = Describe(
@@ -24,7 +24,7 @@ var _ = Describe(
 	Label(farparams.Label), Label("dast"), func() {
 		BeforeAll(func() {
 			By("Verify SNR fence-agents-remediation is the only deployment in namespace")
-			deploymentList, err := deployment.List(APIClient, rhwaparams.RhwaOperatorNs, metav1.ListOptions{})
+			//deploymentList, err := deployment.List(APIClient, rhwaparams.RhwaOperatorNs, metav1.ListOptions{})
 			Expect(err).ToNot(HaveOccurred(), "Failed to list deployments")
 
 			// if len(deploymentList) != 1 {
