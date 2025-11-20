@@ -18,7 +18,7 @@ import (
 )
 
 var _ = Describe(
-	"MDR Post Deployment tests",
+	"NMO Post Deployment tests",
 	Ordered,
 	ContinueOnFailure,
 	Label(nmoparams.Label), Label("dast"), func() {

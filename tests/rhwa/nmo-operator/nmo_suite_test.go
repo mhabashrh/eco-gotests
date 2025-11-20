@@ -32,3 +32,17 @@ var _ = ReportAfterSuite("", func(report Report) {
 	reportxml.Create(
 		report, RHWAConfig.GetReportPath(), RHWAConfig.TCPrefix)
 })
+
+var _ = BeforeSuite(func() {
+	By("Creating test namespace with privileged labels")
+	for key, value := range params.PrivilegedNSLabels {
+		testNS.WithLabel(key, value)
+	}
+	_, err := testNS.Create()
+
+	if err != nil && !apierrors.IsAlreadyExists(err) {
+		Expect(err).ToNot(HaveOccurred(), "error to create test namespace")
+	}
+})
+
+
