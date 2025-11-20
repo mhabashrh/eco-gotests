@@ -10,7 +10,7 @@ import (
 	"github.com/rh-ecosystem-edge/eco-goinfra/pkg/deployment"
 	"github.com/rh-ecosystem-edge/eco-goinfra/pkg/reportxml"
 
-	"github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/far-operator/internal/farparams"
+	"github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/SNR-operator/internal/farparams"
 	. "github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/internal/rhwainittools"
 	"github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/internal/rhwaparams"
 
