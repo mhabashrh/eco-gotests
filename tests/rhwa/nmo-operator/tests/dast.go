@@ -21,7 +21,7 @@ var _ = Describe(
 	"MDR Post Deployment tests",
 	Ordered,
 	ContinueOnFailure,
-	Label(farparams.Label), Label("dast"), func() {
+	Label(nmoparams.Label), Label("dast"), func() {
 		BeforeAll(func() {
 			By("Verify NMO is the only deployment in namespace")
 			deploymentList, err := deployment.List(APIClient, rhwaparams.RhwaOperatorNs, metav1.ListOptions{})
