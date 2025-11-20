@@ -6,10 +6,12 @@ import (
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
+		"github.com/rh-ecosystem-edge/eco-goinfra/pkg/namespace"
 	"github.com/rh-ecosystem-edge/eco-goinfra/pkg/reportxml"
 	"github.com/rh-ecosystem-edge/eco-gotests/tests/internal/params"
 	"github.com/rh-ecosystem-edge/eco-gotests/tests/internal/reporter"
 	. "github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/internal/rhwainittools"
+		"github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/internal/rhwaparams"
 	"github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/nmo-operator/internal/nmoparams"
 	_ "github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/nmo-operator/tests"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
