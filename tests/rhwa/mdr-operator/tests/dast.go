@@ -9,7 +9,7 @@ import (
 
 	"github.com/rh-ecosystem-edge/eco-goinfra/pkg/deployment"
 	"github.com/rh-ecosystem-edge/eco-goinfra/pkg/reportxml"
-	"github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/mdr-operator/internal/farparams"
+	"github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/mdr-operator/internal/mdrparams"
 	rapidast "github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/internal/rapidast"
 	. "github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/internal/rhwainittools"
 	"github.com/rh-ecosystem-edge/eco-gotests/tests/rhwa/internal/rhwaparams"
