@@ -23,7 +23,7 @@ var _ = Describe(
 	ContinueOnFailure,
 	Label(farparams.Label), Label("dast"), func() {
 		BeforeAll(func() {
-			By("Verify fence-agents-remediation is the only deployment in namespace")
+			By("Verify self-node-remediation is the only deployment in namespace")
 			deploymentList, err := deployment.List(APIClient, rhwaparams.RhwaOperatorNs, metav1.ListOptions{})
 			Expect(err).ToNot(HaveOccurred(), "Failed to list deployments")
 
