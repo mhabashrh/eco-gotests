@@ -10,7 +10,7 @@ var (
 	// Labels represents the range of labels that can be used for test cases selection.
 	Labels = []string{rhwaparams.Label, Label}
 	// OperatorDeploymentName represents NHC deployment name.
-	OperatorDeploymentName = "node-health-check-controller-manager"
+	OperatorDeploymentName = "node-healthcheck-controller-manager"
 	// ReporterNamespacesToDump tells to the reporter from where to collect logs.
 	ReporterNamespacesToDump = map[string]string{
 		rhwaparams.RhwaOperatorNs: rhwaparams.RhwaOperatorNs,
