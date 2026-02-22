@@ -18,18 +18,18 @@ import (
 )
 
 var _ = Describe(
-	"FAR Post Deployment tests",
+	"SNR Post Deployment tests",
 	Ordered,
 	ContinueOnFailure,
 	Label(farparams.Label), func() {
 		BeforeAll(func() {
-			By("Get FAR deployment object")
+			By("Get SNR deployment object")
 			farDeployment, err := deployment.Pull(
 				APIClient, farparams.OperatorDeploymentName, rhwaparams.RhwaOperatorNs)
-			Expect(err).ToNot(HaveOccurred(), "Failed to get FAR deployment")
+			Expect(err).ToNot(HaveOccurred(), "Failed to get SNR deployment")
 
-			By("Verify FAR deployment is Ready")
-			Expect(farDeployment.IsReady(rhwaparams.DefaultTimeout)).To(BeTrue(), "FAR deployment is not Ready")
+			By("Verify SNR deployment is Ready")
+			Expect(farDeployment.IsReady(rhwaparams.DefaultTimeout)).To(BeTrue(), "SNR deployment is not Ready")
 		})
 		It("Verify Fence Agents Remediation Operator pod is running", reportxml.ID("66026"), func() {
 
