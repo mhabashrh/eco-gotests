@@ -23,7 +23,7 @@ var _ = Describe(
 		BeforeAll(func() {
 			By("Get SBR deployment object")
 			sbrDeployment, err := deployment.Pull(
-				APIClient, sbrparams.OperatorDeploymentName, rhwaparams.RhwaOperatorNs)
+				APIClient, sbrparams.OperatorDeploymentName, rhwaparams.OpenshiftOperatorNs)
 			Expect(err).ToNot(HaveOccurred(), fmt.Sprintf("Failed to get SBR deployment %s", err))
 
 			By("Verify SBR deployment is Ready")
@@ -32,7 +32,7 @@ var _ = Describe(
 		It("Verify SBR Operator pod is running", reportxml.ID("46315"), func() {
 			_, err := pod.WaitForAllPodsInNamespaceRunning(
 				APIClient,
-				rhwaparams.RhwaOperatorNs,
+				rhwaparams.OpenshiftOperatorNs,
 				rhwaparams.DefaultTimeout,
 			)
 			Expect(err).ToNot(HaveOccurred(), fmt.Sprintf("Pod is not ready %s", err))

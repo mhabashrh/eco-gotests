@@ -9,6 +9,8 @@ const (
 	Label = "rhwa"
 	// RhwaOperatorNs custom namespace of rhwa operators.
 	RhwaOperatorNs = "openshift-workload-availability"
+	// openshift-operators
+	OpenshiftOperatorNs="openshift-operators"
 	// DefaultTimeout represents the default timeout.
 	DefaultTimeout = 300 * time.Second
 	// TestNamespaceName namespace where all dast test cases are performed.

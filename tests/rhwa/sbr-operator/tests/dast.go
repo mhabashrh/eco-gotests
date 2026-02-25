@@ -24,7 +24,7 @@ var _ = Describe(
 	Label(sbrparams.Label), Label("dast"), func() {
 		BeforeAll(func() {
 			By("Verify SBR is the only deployment in namespace")
-			deploymentList, err := deployment.List(APIClient, rhwaparams.RhwaOperatorNs, metav1.ListOptions{})
+			deploymentList, err := deployment.List(APIClient, rhwaparams.OpenshiftOperatorNs, metav1.ListOptions{})
 			Expect(err).ToNot(HaveOccurred(), "Failed to list deployments")
 			fmt.Printf("Deployment List: %+v\n", deploymentList)
 
