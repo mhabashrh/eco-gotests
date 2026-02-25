@@ -29,7 +29,7 @@ var _ = Describe(
 			By("Verify SBR deployment is Ready")
 			Expect(sbrDeployment.IsReady(rhwaparams.DefaultTimeout)).To(BeTrue(), "SBR deployment is not Ready")
 		})
-		It("Verify Node Maintenance Operator pod is running", reportxml.ID("46315"), func() {
+		It("Verify SBR Operator pod is running", reportxml.ID("46315"), func() {
 			_, err := pod.WaitForAllPodsInNamespaceRunning(
 				APIClient,
 				rhwaparams.RhwaOperatorNs,
