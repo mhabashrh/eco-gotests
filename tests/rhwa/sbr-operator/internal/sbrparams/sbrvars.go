@@ -13,7 +13,7 @@ var (
 	OperatorDeploymentName = "sbd-operator-controller-manager"
 	// ReporterNamespacesToDump tells to the reporter from where to collect logs.
 	ReporterNamespacesToDump = map[string]string{
-		rhwaparams.RhwaOperatorNs: rhwaparams.OpenshiftOperatorNs,
+		rhwaparams.OpenshiftOperatorNs: rhwaparams.OpenshiftOperatorNs,
 		"openshift-machine-api":   "openshift-machine-api",
 	}
 	// ReporterCRDsToDump tells to the reporter what CRs to dump.

@@ -48,7 +48,7 @@ var _ = Describe(
 			dastTestPod, err := rapidast.PrepareRapidastPod(APIClient)
 			Expect(err).ToNot(HaveOccurred())
 
-			output, err := rapidast.RunRapidastScan(*dastTestPod, rhwaparams.RhwaOperatorNs)
+			output, err := rapidast.RunRapidastScan(*dastTestPod, rhwaparams.OpenshiftOperatorNs)
 			Expect(err).ToNot(HaveOccurred())
 
 			By("Checking vulnerability scan results")
